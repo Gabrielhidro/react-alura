@@ -1,11 +1,15 @@
+import ListaDeNotas from './components/ListaDeNotas'
 
 function App() {
   return (
-    <form action="">
-      <input type="text" placeholder="Título" />
-      <textarea placeholder="Escreva sua nota" />
-      <button>Criar nota</button>
-    </form>
+    <>
+      <form>
+        <input type="text" placeholder="Título" />
+        <textarea placeholder="Escreva sua nota" />
+        <button>Criar nota</button>
+      </form>
+      <ListaDeNotas />
+    </>
   );
 }
 
