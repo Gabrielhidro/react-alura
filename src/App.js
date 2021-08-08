@@ -5,9 +5,14 @@ import "./assets/App.css";
 import './assets/index.css';
 
 export default function App() {
+
+  criarNota(titulo, texto){
+    console.log(4);
+  }
+
     return (
       <section className="conteudo">
-        <FormularioCadastro />
+        <FormularioCadastro criarNota={this.criarNota}/>
         <ListaDeNotas />
       </section>
     );
