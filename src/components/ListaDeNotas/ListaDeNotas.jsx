@@ -5,11 +5,10 @@ import "./estilo.css";
 export default class ListaDeNotas extends Component {
   render() {
     return (
-      <ul>
+      <ul className="lista-notas">
         {Array.of("trabalho", "trabalho", "estudo").map((categorias, index) => {
           return (
-            <li key={index}>
-              <h4>{categorias}</h4>
+            <li className="lista-notas_item" key={index}>
               <CardNota />
             </li>
           );

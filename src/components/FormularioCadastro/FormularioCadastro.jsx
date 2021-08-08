@@ -4,7 +4,7 @@ import "./estilo.css";
 export default class FormularioCadastro extends Component {
   render() {
     return (
-      <form>
+      <form className="form-cadastro ">
         <input
           type="text"
           placeholder="Título"
