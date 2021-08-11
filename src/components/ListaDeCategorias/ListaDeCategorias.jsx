@@ -6,13 +6,18 @@ class ListaDeCategorias extends Component {
   constructor() {
     super();
     this.state = { categorias: [] };
+    this._novasCategorias = this._novasCategorias.bind(this);
   }
 
-  componentDisMount() {
-    this.props.categorias.inscrever(this._novasCategorias.bind(this));
+  componentDidMount() {
+    this.props.categorias.inscrever(this._novasCategorias);
   }
 
-  novasCategorias(categorias) {
+  componentWillUnmount() {
+    this.props.categorias.desinscrever(this._novasCategorias);
+  }
+
+  _novasCategorias(categorias) {
     this.setState({ ...this.state, categorias });
   }
 
