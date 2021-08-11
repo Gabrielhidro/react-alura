@@ -20,22 +20,22 @@ export default class App extends Component{
     return (
       <section className="conteudo">
         <FormularioCadastro
-          categorias={this.categorias.categorias}
-          criarNota={this.notas.criarNota}
+          categorias={this.categorias}
+          criarNota={this.notas.adicionarNota.bind(this)}
         />
         
         <main className="conteudo-principal">
           
           <ListaDeCategorias
-            adicionarCategoria={this.categorias.adicionarCategoria}
-            categorias={this.categorias.categorias}
+            adicionarCategoria={this.categorias.adicionarCategoria.bind(this.categorias)}
+            categorias={this.categorias}
           />
           
           <ListaDeNotas
-            apagarNota={this.notas.apagarNota}
+            apagarNota={this.notas.apagarNota.bind(this.notas)}
             notas={this.notas.notas}
           />
-          
+
         </main>
       </section>
     );
